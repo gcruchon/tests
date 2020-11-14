@@ -1,4 +1,4 @@
-# Jest-timer test suite
+# svelte-timer test suite
 
 Run `npm install`.
 
