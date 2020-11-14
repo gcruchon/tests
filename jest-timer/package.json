@@ -1,0 +1,43 @@
+{
+  "name": "tests-jest-timer",
+  "version": "0.1.0",
+  "description": "A snipet for test purpose",
+  "main": "main.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public --single",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcruchon/tests.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Gilles CRUCHON <gilles.cruchon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gcruchon/tests/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/svelte": "^3.0.0",
+    "babel-jest": "^26.6.3",
+    "dompurify": "^2.2.2",
+    "jest": "^26.6.3",
+    "rollup": "^2.33.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^6.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sirv-cli": "^0.4.4",
+    "svelte": "^3.29.4",
+    "svelte-jester": "^1.1.5"
+  }
+}
