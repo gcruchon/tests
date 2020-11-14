@@ -1,7 +1,5 @@
 import { render } from "@testing-library/svelte";
 import App from "./App.svelte";
-import jestConfig from "./jest.config";
-
 
 const logThemIn = (context) => jest.fn((count, remaining) => {
   console.log(`[${context}] count=${count} || remaining=${remaining}`);
@@ -17,15 +15,7 @@ describe("App", () => {
     expect(container).toContainHTML("Time remaining: 5 sec.");
     expect(setInterval).toHaveBeenCalledTimes(1);
     expect(setInterval).toHaveBeenLastCalledWith(expect.any(Function), 1000);
-    jest.advanceTimersByTime(1000);
-    expect(logThem).toHaveBeenCalledTimes(1);
-    jest.advanceTimersByTime(1000);
-    expect(logThem).toHaveBeenCalledTimes(2);
-    jest.advanceTimersByTime(1000);
-    expect(logThem).toHaveBeenCalledTimes(3);
-    jest.advanceTimersByTime(1000);
-    expect(logThem).toHaveBeenCalledTimes(4);
-    jest.advanceTimersByTime(1000);
+    jest.advanceTimersByTime(5000);
     expect(logThem).toHaveBeenCalledTimes(5);
     const fifthCall = logThem.mock.calls[4];
     const count = fifthCall[0];
@@ -42,15 +32,7 @@ describe("App", () => {
     expect(document.body.innerHTML).toMatch(/Time remaining: 5 sec./);
     expect(setInterval).toHaveBeenCalledTimes(1);
     expect(setInterval).toHaveBeenLastCalledWith(expect.any(Function), 1000);
-    jest.advanceTimersByTime(1000);
-    expect(logThem).toHaveBeenCalledTimes(1);
-    jest.advanceTimersByTime(1000);
-    expect(logThem).toHaveBeenCalledTimes(2);
-    jest.advanceTimersByTime(1000);
-    expect(logThem).toHaveBeenCalledTimes(3);
-    jest.advanceTimersByTime(1000);
-    expect(logThem).toHaveBeenCalledTimes(4);
-    jest.advanceTimersByTime(1000);
+    jest.advanceTimersByTime(5000);
     expect(logThem).toHaveBeenCalledTimes(5);
     const fifthCall = logThem.mock.calls[4];
     const count = fifthCall[0];
