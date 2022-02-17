@@ -8,8 +8,8 @@ Repo for small tests :
 Test for mermaid
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    Svelte-->svelte-timer;
+    Svelte-->svelte-null-parent-component;
+    svelte-timer-->No anwser;
+    svelte-null-parent-component-->No anwser;
 ```
